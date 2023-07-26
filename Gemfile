@@ -21,6 +21,8 @@ gem "jsonapi-serializer"
 #ruby geocoder gem 
 gem 'geocoder', '~> 1.3', '>= 1.3.7'
 
+# gem 'activerecord-postgis-adapter'
+
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
@@ -46,6 +48,9 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'simplecov'
   gem 'shoulda-matchers'
+  gem 'hirb'
+  gem 'factory_bot_rails'
+  gem 'faker'
 end
 
 group :development do
