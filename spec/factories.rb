@@ -1,37 +1,23 @@
-# FactoryBot.define do 
-#   factory :markets do 
-#     name {Faker::}
+addresses = [
+  "501 Foster Street, Durham, North Carolina 27701", 
+  "15500 County Road 6, Plymouth, Minnesota 55447", 
+  "7350 Pine Creek Road, Colorado Springs, Colorado 80919", 
+  "Main Street & Church Street, Granville, NY, USA", 
+  "3939 Granger Road, Medina, OH, USA", 
+  "2441 Foothill Blvd., Rock Springs, WY, 82901", 
+  "50 Upper Alabama Street, Atlanta, GA, USA"
+  ]
 
-#   end
-
-#   factory :invoice_item do 
-#     :invoice
-#     :item
-#     quantity {Faker::Number.within(range: 1..10)}
-#     unit_price {Faker::Number.decimal(l_digits: 2)}
-#   end
-
-#   factory :invoice do
-#     status {"completed"}
-#     :merchant
-#     :customer
-#   end
-  
-#   factory :item do
-#     name {Faker::Coffee.variety}
-#     description {Faker::Quote.famous_last_words}
-#     unit_price {Faker::Number.decimal(l_digits: 2)}
-#     :merchant
-#   end
-
-#   factory :merchant do
-#     name {Faker::FunnyName.two_word_name}
-#   end
-
-#   factory :transaction do
-#     result { "successful"}
-#     credit_card_number {Faker::Finance.credit_card}
-#     credit_card_expiration_date {Faker::Business.credit_card_expiry_date}
-#     :invoice
-#   end
-# end
+FactoryBot.define do 
+  factory :market do 
+    name { Faker::Name.first_name }
+    address { addresses.sample }
+    site { Faker::Address.community }
+    description { Faker::MichaelScott.quote }
+    fnap {Faker::Dessert.flavor }
+    snap_option { Faker::Food.dish }
+    accepted_payment { Faker::Currency.name }
+    longitude {-104.0000000 }
+    latitude { 42.0000000 }
+  end
+end
