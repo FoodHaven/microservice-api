@@ -22,3 +22,9 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+<!-- 
+Name
+Location/Address
+Save to Favorites Button (flash error if no user, link to user markets index if current_user)
+Link/Button to Find Route
+Return to Closest Market Page link -->
