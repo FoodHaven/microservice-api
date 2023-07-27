@@ -13,7 +13,7 @@ FactoryBot.define do
     name { Faker::Name.first_name }
     address { addresses.sample }
     site { Faker::Address.community }
-    description { Faker::MichaelScott.quote }
+    description { Faker::TvShows::MichaelScott.quote }
     fnap {Faker::Dessert.flavor }
     snap_option { Faker::Food.dish }
     accepted_payment { Faker::Currency.name }
