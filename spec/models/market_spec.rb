@@ -1,13 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Market, type: :model do
-  describe 'validations' do 
-    it 'geocodes market upon validation' do
-      market = Market.new(longitude: 12.34, latitude: 56.78)
-      expect(market).to receive(:geocode)
-      expect(market.valid?).to be true
-    end
-  end
+  describe 'validations' 
 
   describe 'class methods' do 
     describe 'benefits' do 
@@ -37,14 +31,15 @@ RSpec.describe Market, type: :model do
     end
 
     describe 'proximity' do 
-    it '::closest_markets' do 
-      create(:market, address: "501 Foster Street, Durham, North Carolina 27701")
-      create(:market, address: "7350 Pine Creek Road, Colorado Springs, Colorado 80919")
-      create(:market, address: "2441 Foothill Blvd., Rock Springs, WY, 82901")
-      create(:market, address: "3939 Granger Road, Medina, OH, USA")
-      result = Market.closest_markets([-104.8970453, 40.7893642], 100)
-      require 'pry'; binding.pry
+      it '::nearby_markets' do 
+        market_1 = create(:market, longitude: -81.1478018, latitude: 36.1582212)
+        market_2 = create(:market, longitude: -81.2843197, latitude: 35.6741832)
+        market_3 = create(:market, longitude: -117.90522, latitude: 48.543279)
+        market_4 = create(:market, longitude: -80.3862664534582, latitude: 33.97372952277976)
+        market_5 = create(:market, longitude: -73.686043, latitude: 40.983895)
+        result = Market.nearby_markets([34.60, -80.34], 50)
+        expect(result.to_a).to eq([market_4])
+      end
     end
-  end
   end
 end

@@ -18,10 +18,8 @@ gem "jsonapi-serializer"
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
-#ruby geocoder gem 
-gem 'geocoder', '~> 1.3', '>= 1.3.7'
-
-# gem 'activerecord-postgis-adapter'
+#rails geokit
+gem 'geokit-rails'
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"

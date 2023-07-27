@@ -17,5 +17,7 @@ FactoryBot.define do
     fnap {Faker::Dessert.flavor }
     snap_option { Faker::Food.dish }
     accepted_payment { Faker::Currency.name }
+    latitude { -104.7890345 }
+    longitude { 40.7698435 }
   end
 end
