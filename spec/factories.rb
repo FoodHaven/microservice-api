@@ -17,11 +17,5 @@ FactoryBot.define do
     fnap {Faker::Dessert.flavor }
     snap_option { Faker::Food.dish }
     accepted_payment { Faker::Currency.name }
-    longitude { -104.0000000 }
-    latitude { 42.0000000 }
-  end
-
-  after(:create) do 
-    geocode_by [:latitude, :longitude]
   end
 end
