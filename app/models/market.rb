@@ -1,4 +1,4 @@
 class Market < ApplicationRecord
-  geocoded_by [:longitute, :latitude]
-  after_validation :geocode
+  reverse_geocoded_by :longitude, :latitude
+  after_validation :reverse_geocode
 end
