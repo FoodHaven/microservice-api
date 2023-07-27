@@ -39,7 +39,6 @@ RSpec.describe 'Market Index' do
 
         expect(market[:attributes]).to have_key(:latitude)
         expect(market[:attributes][:latitude]).to be_an(Float)
-
       end
     end
   end
