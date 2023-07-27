@@ -16,7 +16,7 @@ class MarketSerializer
             snap_option: market.snap_option,
             accepted_payment: market.accepted_payment,
             longitude: market.longitude,
-            latitude: market.longitude
+            latitude: market.latitude
           }
         }
       end
