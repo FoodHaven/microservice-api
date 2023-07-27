@@ -13,11 +13,11 @@ FactoryBot.define do
     name { Faker::Name.first_name }
     address { addresses.sample }
     site { Faker::Address.community }
-    description { Faker::MichaelScott.quote }
+    description { Faker::TvShows::MichaelScott.quote }
     fnap {Faker::Dessert.flavor }
     snap_option { Faker::Food.dish }
     accepted_payment { Faker::Currency.name }
-    longitude {-104.0000000 }
-    latitude { 42.0000000 }
+    latitude { -104.7890345 }
+    longitude { 40.7698435 }
   end
 end
