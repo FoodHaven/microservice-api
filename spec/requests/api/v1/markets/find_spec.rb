@@ -24,7 +24,7 @@ RSpec.describe 'Markets', type: :feature do
     #     radius: 50
     #   }
 
-    #   get '/api/v1/markets/closest', params: query_params
+    #   get '/api/v1/markets/search', params: query_params
 
     #   expect(response).to be_successful
     # end
