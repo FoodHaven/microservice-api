@@ -45,6 +45,5 @@ RSpec.describe 'Markets' do
         expect(market[:attributes]).to have_key(:latitude)
         expect(market[:attributes][:latitude]).to eq(@market.latitude)
       end
-    end
   end
 end
