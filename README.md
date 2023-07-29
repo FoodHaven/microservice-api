@@ -1,30 +1,45 @@
-# README
+# Introduction
+This API is a service built to store farmers market data downloaded from the USDA Local Food Portal farmers market directory [here](https://www.usdalocalfoodportal.com/fe/datasharing/) and expose endpoints to access specific subsets of that data. The original intended use of this API is as a microservice for consumption by other component services of the Food Haven web application. This application was build using Ruby 3.2.2 and Rails 7.0.6
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Features
+* Exposes 4 endpoints that return various subsets of farmers market info as JSON
+* Stores the farmers markets in a Postgresql database. 
 
-Things you may want to cover:
+# Installation
 
-* Ruby version
+Should it be necessary to install this application on your local machine, follow these steps: 
+1. In your terminal, in the directory you intend to store this application, run 
+ - ```git clone git@github.com:FoodHaven/microservice-api.git```
+2. Enter the microservice-api directory and run the following commands: 
+ - ```bundle install```
+ - ```rails db:{drop,create,migrate,seed}```
+Bam. Pretty sure you good now. 
 
-* System dependencies
+# API Endpoints
+`https://foodhaven-farmers-markets-api.onrender.com/api/v1/markets`
+- This endpoint renders an index of all farmers markets in the database. 
 
-* Configuration
+`https://foodhaven-farmers-markets-api.onrender.com/api/v1/markets/{market id}`
+- Renders a a JSON object for a single market by that market's id.
 
-* Database creation
+`https://foodhaven-farmers-markets-api.onrender.com/api/v1/markets/search?longitude={longitude}&latitude={latitude}&radius={radius}`
+- Returns a list of markets within the radius of a specific latitude and longitude. Radius, latitude, and longitude are passed as query parameters when making a request to this endpoint.
 
-* Database initialization
+`https://foodhaven-farmers-markets-api.onrender.com/api/v1/markets/favorites?market_ids[]={:id}&market_ids[]={:id}&market_ids[]={:id}`
+- Renders a list of markets by their ids. Arrays of ids are passed as query parameters when making a request to this endpoint. 
 
-* How to run the test suite
+# Authors 
+## Kailey Kaes
+@kaileykaes [linkedin](https://www.linkedin.com/in/kaileykaes/)
 
-* Services (job queues, cache servers, search engines, etc.)
+## Jesse Sorman
+@Jesse193 [linkedin](https://www.linkedin.com/in/jesse-sorman/)
 
-* Deployment instructions
+## Andy Stilmock
+@AStilmock [linkedin](https://www.linkedin.com/in/andrew-stilmock-9ba598270/)
 
-* ...
-<!-- 
-Name
-Location/Address
-Save to Favorites Button (flash error if no user, link to user markets index if current_user)
-Link/Button to Find Route
-Return to Closest Market Page link -->
+## Kim Bergstrom
+@kbergstrom78 [linkedin](https://www.linkedin.com/in/kimberley-bergstrom/)
+
+# Sources: 
+USDA’s Agricultural Marketing Service &amp; Michigan State University. (n.d.). USDA local food directories. USDA Local Food Directories. https://www.usdalocalfoodportal.com/fe/datasharing/ 
