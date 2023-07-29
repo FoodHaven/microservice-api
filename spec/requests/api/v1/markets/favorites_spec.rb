@@ -17,7 +17,7 @@ RSpec.describe 'Markets' do
         @market_4_id
       ])
 
-      get api_v1_markets_search_path, params: query_params
+      get api_v1_markets_favorites_path, params: query_params
 
       expect(response).to be_successful
     end
