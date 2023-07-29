@@ -6,9 +6,9 @@ Rails.application.routes.draw do
 
   namespace :api do 
     namespace :v1 do 
-      resources :markets, only: [:index, :show] 
-      get '/markets/search', to: 'markets/search#index', as: 'markets_search'
       get '/markets/favorites', to: 'markets/favorites#index', as: 'markets_favorites'
+      get '/markets/search', to: 'markets/search#index', as: 'markets_search'
+      resources :markets, only: [:index, :show] 
     end
   end
 end
