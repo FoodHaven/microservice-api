@@ -17,7 +17,7 @@ RSpec.describe 'Markets' do
 
       get api_v1_markets_favorites_path, params: query_params
 
-      expect{response).to be_successful
+      expect(response).to be_successful
     end
 
     it 'returns the correct json objects' do 
