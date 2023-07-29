@@ -6,7 +6,7 @@ RSpec.describe 'Markets' do
     @market = Market.last
   end
 
-  describe 'find by long, lat & radius' do
+  describe 'find a single market' do
     it 'hits the endpoint' do 
       get api_v1_market_path(@market)
       
