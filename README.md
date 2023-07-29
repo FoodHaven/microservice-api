@@ -30,16 +30,20 @@ Bam. Pretty sure you good now.
 
 # Authors 
 ## Kailey Kaes
-[@kaileykaes](https://github.com/kaileykaes) [linkedin](https://www.linkedin.com/in/kaileykaes/)
+#### [@kaileykaes](https://github.com/kaileykaes) 
+#### [LinkedIn](https://www.linkedin.com/in/kaileykaes/)
 
 ## Jesse Sorman
-[@Jesse193](https://github.com/Jesse193) [linkedin](https://www.linkedin.com/in/jesse-sorman/)
+#### [@Jesse193](https://github.com/Jesse193) 
+#### [LinkedIn](https://www.linkedin.com/in/jesse-sorman/)
 
 ## Andy Stilmock
-[@AStilmock](https://github.com/AStilmock) [linkedin](https://www.linkedin.com/in/andrew-stilmock-9ba598270/)
+#### [@AStilmock](https://github.com/AStilmock) 
+#### [LinkedIn](https://www.linkedin.com/in/andrew-stilmock-9ba598270/)
 
 ## Kim Bergstrom
-[@kbergstrom78](https://github.com/kbergstrom78) [linkedin](https://www.linkedin.com/in/kimberley-bergstrom/)
+#### [@kbergstrom78](https://github.com/kbergstrom78)
+#### [LinkedIn](https://www.linkedin.com/in/kimberley-bergstrom/)
 
 # Sources: 
 USDA’s Agricultural Marketing Service &amp; Michigan State University. (n.d.). USDA local food directories. USDA Local Food Directories. https://www.usdalocalfoodportal.com/fe/datasharing/ 
