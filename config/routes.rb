@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     namespace :v1 do 
       resources :markets, only: [:index, :show] 
       get '/markets/search', to: 'markets/search#index', as: 'markets_search'
+      get '/markets/favorites', to: 'markets/favorites#index', as: 'markets_favorites'
     end
   end
 end

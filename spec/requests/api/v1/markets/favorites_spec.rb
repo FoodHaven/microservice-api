@@ -11,23 +11,19 @@ RSpec.describe 'Markets' do
 
   describe 'find favorites by id' do
     it 'hits the endpoint' do 
-      query_params = ([ 
-        @market_1_id,
-        @market_2_id, 
-        @market_4_id
-      ])
+      query_params = {
+        market_ids: [@market_1_id, @market_2_id, @market_4_id ]
+      }
 
       get api_v1_markets_favorites_path, params: query_params
 
-      expect(response).to be_successful
+      expect{response).to be_successful
     end
 
     it 'returns the correct json objects' do 
-      query_params = ([ 
-        @market_1_id, 
-        @market_2_id, 
-        @market_4_id
-      ])
+      query_params = {
+        market_ids: [@market_1_id, @market_2_id, @market_4_id ]
+      }
 
       get api_v1_markets_favorites_path, params: query_params
 
