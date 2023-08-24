@@ -15,6 +15,6 @@ class Market < ApplicationRecord
   end
 
   def self.nearby_markets(coordinates, radius)
-    within(radius, origin: coordinates)
+    accepts_benefits.within(radius, origin: coordinates)
   end
 end
